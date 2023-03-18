@@ -32,7 +32,15 @@ app.get('/drinks', (req, res) => {
     res.render('index', {drinks});
 })
 
+app.get('drinks/:id', (req, res) => {
+    res.render(req.params.id);
+})
 
+app.get('/plants/:id', (req, res) => {
+    console.log({req: req.params})
+    const id = req.params.id
+    res.send(plants[id])
+})
 
 
 
