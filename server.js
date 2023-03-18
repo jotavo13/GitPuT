@@ -5,7 +5,7 @@ const app = express();
 const drinks = require('./models/Drinks');
 // console.log(models);
 
-
+const foods = require('./models/Foods');
 
 // Models - Database stuff
 // controllers - routes
@@ -32,17 +32,19 @@ app.get('/drinks', (req, res) => {
     res.render('index', {drinks});
 })
 
-app.get('drinks/:id', (req, res) => {
-    res.render(req.params.id);
+app.get('/drinks/:id', (req, res) => {
+    let drink = drinks[req.params.id];
+    res.render('show', {drink});
 })
 
-app.get('/plants/:id', (req, res) => {
-    console.log({req: req.params})
-    const id = req.params.id
-    res.send(plants[id])
-})
+// app.get('/foods', (req, res) => {
+//     res.render('food_index', {foods});
+// })
 
-
+// app.get('/foods/:id', (req, res) => {
+//     let food = foods[req.params.id];
+//     res.render('food_show', {food});
+// })
 
 
 app.listen(port, () => {

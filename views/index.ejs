@@ -14,13 +14,16 @@
 </head>
 <body>
     <h1>Welcome to GitPuT</h1>
+    <ul>
     <% for (let i = 0; i < drinks.length; i++) { %>
-      <ul>
-        <h2>Name: <%= drinks[i].name %> </h2>
-        <h2>Price: <%= drinks[i].price %> </h2>
+        <% let drink = drinks[i].name.charAt(0,1).toUpperCase() + drinks[i].name.slice(1); %>
+        <h2>Name: <a href = "http://localhost:3000/drinks/<%= i %>"><%= drink %> </a></h2>
+        <h3>Price: <%= drinks[i].price %> </h3>
         <img src=<%="drinks[i].image" %> >  
+        <%}%>
       </ul>
-     <%}%>
+      
+      <!-- <img src="<%= drinkImage.replace('.jpg', '.png') %>" alt="Drink Image"> -->
 
 </body>
 </html>
