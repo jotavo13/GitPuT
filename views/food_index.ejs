@@ -16,7 +16,7 @@
     <h1>Welcome to GitPuT</h1>
     <ul>
     <% for (let i = 0; i < foods.length; i++) { %>
-        <% let drink = foods[i].name.charAt(0,1).toUpperCase() + foods[i].name.slice(1); %>
+        <% let food = foods[i].name.charAt(0,1).toUpperCase() + foods[i].name.slice(1); %>
         <h2>Name: <a href = "http://localhost:3000/foods/<%= i %>"><%= food %> </a></h2>
         <h3>Price: <%= foods[i].price %> </h3>
         <img src=<%="foods[i].image" %> >  

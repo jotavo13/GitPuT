@@ -1,4 +1,4 @@
-const food = [
+const foods = [
     {
       name: '(req, rEscargot)',
       price: 12,
@@ -36,4 +36,4 @@ const food = [
     }
   ]
 
-  module.exports = food;
+  module.exports = foods;

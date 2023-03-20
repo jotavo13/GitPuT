@@ -37,14 +37,14 @@ app.get('/drinks/:id', (req, res) => {
     res.render('show', {drink});
 })
 
-// app.get('/foods', (req, res) => {
-//     res.render('food_index', {foods});
-// })
+app.get('/foods', (req, res) => {
+    res.render('food_index', {foods});
+})
 
-// app.get('/foods/:id', (req, res) => {
-//     let food = foods[req.params.id];
-//     res.render('food_show', {food});
-// })
+app.get('/foods/:id', (req, res) => {
+    let food = foods[req.params.id];
+    res.render('food_show', {food});
+})
 
 
 app.listen(port, () => {
